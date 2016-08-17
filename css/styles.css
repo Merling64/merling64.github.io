@@ -46,6 +46,17 @@ section h1{
     float:left;
     width:100%;
 }
+section p{
+    font-size:18px;
+    font-weight: 500;
+    text-align: left;
+    width:100%;
+    float:left;
+    margin:0px;
+    padding:0px;
+    margin-bottom:10px;
+    transition:0.2s;
+}
 .social_link{
     display: inline-block;
     height:44px;

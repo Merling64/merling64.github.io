@@ -5,6 +5,8 @@
     header,section{
         width:100%;
         float:left;
-        text-align: center;
+    }
+    section p{
+        font-size:14px;
     }
 }
