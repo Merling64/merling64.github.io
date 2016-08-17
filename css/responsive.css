@@ -1,0 +1,10 @@
+@media(max-width:1024px){
+    body{
+        padding:0px 10px;
+    }
+    header,section{
+        width:100%;
+        float:left;
+        text-align: center;
+    }
+}
