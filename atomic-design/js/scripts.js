@@ -1,0 +1,8 @@
+//
+//
+// SCRIPTS
+//
+//
+
+$(document).ready(function(){
+});
