@@ -384,9 +384,11 @@ ul{
   list-style: none;
   padding:0px;
   margin:0px;
+  margin-top:10px;
 }
 ul li{
-  margin-top:20px;
+  margin:5px;
+  float:right;
 }
 ul li a{
   background:#FDD835;
