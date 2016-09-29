@@ -7,6 +7,7 @@
 function animate(){
 	setTimeout(function(){
 		$('.hidden:eq(0)').removeClass('hidden');
+		$('.step:eq(0)').addClass('active');
 	},1000);
 
 	setTimeout(function(){
@@ -19,11 +20,14 @@ function animate(){
 
 	setTimeout(function(){
 		$('.newsletter').removeClass('active');
+		$('.newsletter').addClass('bordered');
+		$('.step:eq(1)').addClass('active');
 	},4000);
 
 	setTimeout(function(){
 		$('.newsletter').removeClass('centered');
 		$('.footer').removeClass('active');
+		$('.step:eq(2)').addClass('active');
 	},5000);
 
 	setTimeout(function(){
@@ -44,6 +48,7 @@ function animate(){
 	setTimeout(function(){
 		$('.animation_container').addClass('active');
 		$('body').addClass('active');
+		$('.step:eq(3)').addClass('active');
 	},7000);
 
 	setTimeout(function(){
@@ -63,12 +68,18 @@ function animate(){
 	},7800);
 	setTimeout(function(){
 		$('.loremblock:eq(5)').fadeIn();
+		$('.loremblock p').fadeIn();
+		$('.step:eq(4)').addClass('active');
 	},8000);
 }
 
 $(document).ready(function(){
-	$('.animation').click(function(){
+	var a = $('.animation').html();
+	$('.animation').html(a);
+	animate();
+	setInterval(function(){
+		$('.step').removeClass('active');
+		$('.animation').html(a);
 		animate();
-		$(this).addClass('playing');
-	});
+	},12000);
 });
