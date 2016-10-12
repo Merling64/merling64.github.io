@@ -43,6 +43,7 @@ body{
   width:100%;
   position:relative;
   border-bottom:1px solid #f5f7f9;
+  padding-bottom:20px;
 }
 .tweet_content{
   float:left;
@@ -53,7 +54,6 @@ body{
   font-size:14px;
   padding-right:14px;
   transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
-  padding-bottom:20px;
 }
 .tweet_content_image{
   position:absolute;
