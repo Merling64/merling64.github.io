@@ -1,0 +1,129 @@
+/*
+  *
+  *
+  * STYLE
+  *
+  *
+*/
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    color:#000;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -ms-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.header{
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:120px;
+  background:#fff;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.timeline{
+  position:absolute;
+  left:0px;
+  top:120px;
+  bottom:0px;
+  right:0px;
+  overflow: auto;
+}
+.tweet{
+  float:left;
+  width:100%;
+  position:relative;
+  border-bottom:1px solid #f5f7f9;
+}
+.tweet_content{
+  float:left;
+  width:100%;
+  position:relative;
+  padding-left:80px;
+  padding-top:14px;
+  font-size:14px;
+  padding-right:14px;
+  transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
+}
+.tweet_content_image{
+  position:absolute;
+  left:14px;
+  top:14px;
+  width:52px;
+  height:52px;
+  box-shadow:inset 1px 1px 10px rgba(0,0,0,0.1);
+  border-radius:52px;
+}
+.tweet_content_name{
+  float:left;
+  font-weight: bold;
+  color:#333;
+  margin-right:5px;
+}
+.tweet_content_nickname{
+  float:left;
+  color:#666;
+}
+.tweet_content_time{
+  float:right;
+  color:#666;
+}
+.tweet_content_message{
+  float:left;
+  width:100%;
+  margin-top:10px;
+  color:#666;
+  line-height:20px;
+}
+.tweet_content_message img{
+  width:100%;
+  height:auto;
+}
+
+.tweet_options{
+  position:absolute;
+  left:0px;
+  top:50%;
+  margin-top:-22px;
+  width:100%;
+  display: table;
+  transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
+  opacity:0;
+  -webkit-transform:scale(0);
+  transform:scale(0);
+}
+.tweet:hover .tweet_options{
+  opacity:1;
+  -webkit-transform:scale(1);
+  transform:scale(1);
+}
+.tweet:hover .tweet_content{
+  opacity:0.9;
+  -webkit-filter:blur(5px);
+}
+.tweet_options span{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size:0px;
+}
+.tweet_options span button{
+  height:44px;
+  width:44px;
+  display: inline-block;
+  margin:0px 0px;
+  background:#000;
+  border-radius:44px;
+  border:2px solid #fff;
+  box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+  margin:0px 10px;
+}
