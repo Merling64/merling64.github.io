@@ -53,6 +53,7 @@ body{
   font-size:14px;
   padding-right:14px;
   transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
+  padding-bottom:20px;
 }
 .tweet_content_image{
   position:absolute;
