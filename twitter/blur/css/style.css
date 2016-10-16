@@ -106,12 +106,12 @@ body{
   -webkit-transform:scale(0);
   transform:scale(0);
 }
-.tweet.active .tweet_options{
+.tweet:hover .tweet_options{
   opacity:1;
   -webkit-transform:scale(1);
   transform:scale(1);
 }
-.tweet.active .tweet_content{
+.tweet:hover .tweet_content{
   opacity:0.9;
   -webkit-filter:blur(5px);
 }
