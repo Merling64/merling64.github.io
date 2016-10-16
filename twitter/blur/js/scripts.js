@@ -12,13 +12,21 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.tweet_options button').mouseup(function(){
+		alert($(this).attr('data-action'));
+		$('.tweet').removeClass('active');
+		$('.timeline').removeAttr('style');
+	});
+
+
+
 });
 
 $(function(){
-	alert('hey');
 	$( ".tweet" ).bind( "taphold", tapholdHandler );
 
 	function tapholdHandler( event ){
 	$(this).addClass( "active" );
+	$('.timeline').css('overflow','hidden');
 	}
 });
