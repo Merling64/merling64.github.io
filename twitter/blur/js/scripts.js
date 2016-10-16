@@ -12,23 +12,8 @@ $(document).ready(function(){
 		}
 	});
 
-	var onlongtouch; 
-	var timer;
-	var touchduration = 500; //length of time we want the user to touch before we do something
-
-	touchstart() {
-	    timer = setTimeout(onlongtouch, touchduration); 
-	}
-
-	touchend() {
-
-	    //stops short touches from firing the event
-	    if (timer)
-	        clearTimeout(timer); // clearTimeout, not cleartimeout..
-	}
-
-	onlongtouch = function() { 
+	$('.tweet').on('taphold',function(){
 		alert('hey');
-	}
+	});
 
 });
