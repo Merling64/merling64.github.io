@@ -12,8 +12,12 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).on('taphold','.tweet',function(event){
-		alert('hey');
-	});
+});
 
+$(function(){
+  $( ".tweet" ).bind( "taphold", tapholdHandler );
+ 
+  function tapholdHandler( event ){
+    $(this).addClass( "active" );
+  }
 });
