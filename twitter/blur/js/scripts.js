@@ -12,6 +12,10 @@ $(document).ready(function(){
 		}
 	});
 
+	$('.tweet').on('taphold',function(){
+		alert('hey');
+	});
+
 	function longClickHandler(e){
 		e.preventDefault();
 		$("body").append("<p>You longclicked. Nice!</p>");
