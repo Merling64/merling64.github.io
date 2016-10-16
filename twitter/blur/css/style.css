@@ -143,3 +143,15 @@ body{
   box-shadow:0px 2px 10px rgba(0,0,0,0.2);
   margin:0px 10px;
 }
+
+.tweet_button{
+  width:70px;
+  height:70px;
+  border-radius:70px;
+  background:url(../images/write.png) no-repeat center center #439BD5;
+  background-size:30px;
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  z-index:2;
+}
