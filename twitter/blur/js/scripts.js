@@ -12,20 +12,23 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.tweet').mousedown(function() {
-		var tweet = $(this);
-	    timeoutId = setTimeout(function(){
-	    	tweet.addClass(active);
-	    }, 500);
-	}).bind('mouseup mouseleave', function() {
-	    clearTimeout(timeoutId);
-	});
+	var onlongtouch; 
+	var timer;
+	var touchduration = 500; //length of time we want the user to touch before we do something
 
-	function longClickHandler(e){
-		e.preventDefault();
-		$("body").append("<p>You longclicked. Nice!</p>");
+	touchstart() {
+	    timer = setTimeout(onlongtouch, touchduration); 
 	}
 
-	$("p a").longclick(250, longClickHandler);
+	touchend() {
+
+	    //stops short touches from firing the event
+	    if (timer)
+	        clearTimeout(timer); // clearTimeout, not cleartimeout..
+	}
+
+	onlongtouch = function() { 
+		alert('hey');
+	}
 
 });
