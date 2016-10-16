@@ -12,8 +12,13 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.tweet').on('taphold',function(){
-		alert('hey');
+	$('.tweet').mousedown(function() {
+		var tweet = $(this);
+	    timeoutId = setTimeout(function(){
+	    	tweet.addClass(active);
+	    }, 500);
+	}).bind('mouseup mouseleave', function() {
+	    clearTimeout(timeoutId);
 	});
 
 	function longClickHandler(e){

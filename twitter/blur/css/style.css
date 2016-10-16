@@ -117,12 +117,12 @@ body{
   -webkit-transform:scale(0);
   transform:scale(0);
 }
-.tweet:hover .tweet_options{
+.tweet.active .tweet_options{
   opacity:1;
   -webkit-transform:scale(1);
   transform:scale(1);
 }
-.tweet:hover .tweet_content{
+.tweet.active .tweet_content{
   opacity:0.9;
   -webkit-filter:blur(5px);
 }
