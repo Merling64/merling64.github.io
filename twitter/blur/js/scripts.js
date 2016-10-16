@@ -15,9 +15,10 @@ $(document).ready(function(){
 });
 
 $(function(){
-  $( ".tweet" ).bind( "taphold", tapholdHandler );
- 
-  function tapholdHandler( event ){
-    $(this).addClass( "active" );
-  }
+	alert('hey');
+	$( ".tweet" ).bind( "taphold", tapholdHandler );
+
+	function tapholdHandler( event ){
+	$(this).addClass( "active" );
+	}
 });
