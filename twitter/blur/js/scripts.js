@@ -12,7 +12,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$('.tweet').on('taphold',function(){
+	$(document).on('taphold','.tweet',function(){
 		alert('hey');
 	});
 
