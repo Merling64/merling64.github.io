@@ -45,7 +45,6 @@ body{
   position:relative;
   border-bottom:1px solid #f5f7f9;
   padding-bottom:20px;
-  cursor:pointer;
 }
 .tweet_content{
   float:left;
