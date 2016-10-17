@@ -30,28 +30,41 @@ body{
   left:0px;
   top:0px;
   width:100%;
-  height:100px;
-  background:url(../images/header.jpg) no-repeat center bottom;
+  height:60px;
+  background:url(../images/header.jpg) no-repeat center top;
   background-size:100% auto;
   box-shadow:0px 0px 10px rgba(0,0,0,0.1);
   transition:0.2s ease-in-out;
 }
+.footer{
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  height:50px;
+  background:url(../images/header.jpg) no-repeat center bottom;
+  background-size:100% auto;
+  box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+  transition:0.2s ease-in-out;
+  z-index:2;
+}
 .header.scroll{
-  top:-40px;
+  top:-60px;
   transition:0.5s ease-in-out;
 }
 
 .timeline{
   position:absolute;
   left:0px;
-  top:100px;
+  top:60px;
   bottom:0px;
   right:0px;
   overflow: auto;
   transition:0.2s ease-in-out;
+  padding-bottom: 60px;
 }
 .timeline.scroll{
-  top:60px;
+  top:0px;
   transition:0.5s ease-in-out;
 }
 .tweet{
@@ -60,16 +73,6 @@ body{
   position:relative;
   border-bottom:1px solid #f5f7f9;
   padding-bottom:20px;
-  cursor:pointer;
-}
-.tweet:before{
-  content:'';
-  position:absolute;
-  left:0px;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  z-index:2;
 }
 .tweet_content{
   float:left;
@@ -78,7 +81,7 @@ body{
   padding-left:80px;
   padding-top:14px;
   font-size:14px;
-  padding-right:14px;
+  padding-right:40px;
   transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
 }
 .tweet_content_image{
@@ -117,62 +120,45 @@ body{
   width:100%;
   height:auto;
 }
-
-.tweet_options{
+.open_options{
+  width:7px;
+  height:23px;
   position:absolute;
-  left:0px;
-  top:50%;
-  margin-top:-22px;
-  width:100%;
-  display: table;
-  transition:0.5s cubic-bezier(.49,-0.17,.36,1.21);
-  opacity:0;
-  -webkit-transform:scale(0);
-  transform:scale(0);
+  right:10px;
+  top:14px;
+  cursor:pointer;
   z-index:3;
 }
-.tweet.active .tweet_options{
-  opacity:1;
-  -webkit-transform:scale(1);
-  transform:scale(1);
+.open_options div{
+  position:absolute;
+  left:0px;
+  top:8px;
+  width:7px;
+  height:7px;
+  border-radius:7px;
+  background:#657786;
 }
-.tweet.active .tweet_content{
-  opacity:0.5;
-  -webkit-filter:blur(5px);
+
+.open_options:before{
+  content:'';
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:7px;
+  height:7px;
+  border-radius:7px;
+  background:#657786;
 }
-.tweet_options span{
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  font-size:0px;
-}
-.tweet_options span button{
-  height:50px;
-  width:50px;
-  display: inline-block;
-  margin:0px 0px;
-  background:transparent;
-  border-radius:50px;
-  margin:0px 20px;
-  color:#697882;
-  font-size:40px;
-  text-align:center;
-  line-height:50px;
-  border:0px;
-  text-shadow:0px 0px 30px #fff;
-  transition:0.2s;
-}
-.tweet_options span button.icon-heart.active{
-  color:#e81c4f;
-  font-size:44px;
-}
-.tweet_options span button.icon-retweet.active{
-  color:#19cf86;
-  font-size:44px;
-}
-.tweet_options span button.icon-reply.active{
-  color:#1da1f2;
-  font-size:44px;
+
+.open_options:after{
+  content:'';
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  width:7px;
+  height:7px;
+  border-radius:7px;
+  background:#657786;
 }
 
 .tweet_button{
@@ -183,6 +169,54 @@ body{
   background-size:30px;
   position:absolute;
   right:20px;
-  bottom:20px;
+  bottom:70px;
   z-index:2;
+}
+
+.option_button{
+  width:50px;
+  height:50px;
+  color:#fff;
+  position:absolute;
+  background:#ccc;
+  border-radius:50px;
+  text-align: center;
+  line-height:50px;
+  box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+  z-index:4;
+  opacity:0;
+  -webkit-transform:scale(0);
+  right:0px;
+  top:0px;
+  transition:0.4s cubic-bezier(.75,-0.16,.27,1.2);
+}
+.option_button.active{
+  opacity:1;
+  -webkit-transform:scale(1);
+}
+.option_button:active{
+  opacity:1;
+  -webkit-transform:scale(1.2) !important;
+  transition:0.1s cubic-bezier(.75,-0.16,.27,1.2);
+}
+.option_button.icon-heart.active{
+  top: 14px;
+  right: 90px;
+}
+.option_button.icon-retweet.active{
+  top: 70px;
+  right: 70px;
+}
+.option_button.icon-reply.active{
+  top: 90px;
+  right: 14px;
+}
+.option_button.icon-heart.clicked{
+  background:#e81c4f;
+}
+.option_button.icon-retweet.clicked{
+  background:#19cf86;
+}
+.option_button.icon-reply.clicked{
+  background:#1da1f2;
 }

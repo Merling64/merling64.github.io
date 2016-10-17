@@ -10,34 +10,32 @@ $(document).ready(function(){
 		}else{
 			$('.header,.timeline').removeClass('scroll');
 		}
+
+		$('.open_options').each(function(){
+			var button = $(this);
+			setTimeout(function(){button.next().removeClass('active');},0);
+			setTimeout(function(){button.next().next().removeClass('active');},50);
+			setTimeout(function(){button.next().next().next().removeClass('active');},100);
+			setTimeout(function(){button.fadeIn();},100);
+		});
 	});
 
-	$('.tweet_options button').on('touchend',function(){
-		if($(this).hasClass('icon-heart') && $(this).hasClass('active')){
-			$(this).removeClass('active');
-			$('.tweet').removeClass('active');
-			$('.timeline').removeAttr('style');
-			return false;
-		}
-
-		$(this).addClass('active');
-		$('.tweet').removeClass('active');
-		$('.timeline').removeAttr('style');
+	$('.open_options').click(function(){
+		var button = $(this);
+		setTimeout(function(){button.next().addClass('active');},0);
+		setTimeout(function(){button.next().next().addClass('active');},50);
+		setTimeout(function(){button.next().next().next().addClass('active');},100);
+		setTimeout(function(){button.fadeOut();},100);
 	});
 
-
-	$('.tweet').on('click',function(){
-		$('.tweet').removeClass('active');
-		$('.timeline').removeAttr('style');
+	$('.option_button').click(function(){
+		$(this).addClass('clicked');
+		$('.open_options').each(function(){
+			var button = $(this);
+			setTimeout(function(){button.next().removeClass('active');},1010);
+			setTimeout(function(){button.next().next().removeClass('active');},1050);
+			setTimeout(function(){button.next().next().next().removeClass('active');},1200);
+			setTimeout(function(){button.fadeIn();},1200);
+		});
 	});
-
-});
-
-$(function(){
-	$( ".tweet" ).bind( "taphold", tapholdHandler );
-
-	function tapholdHandler( event ){
-	$(this).addClass( "active" );
-	$('.timeline').css('overflow','hidden');
-	}
 });
